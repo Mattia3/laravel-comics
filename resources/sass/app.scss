@@ -1,0 +1,207 @@
+.my-container {
+    height: 30px;
+    background-color: blue;
+    color: white;
+    display: flex;
+    align-items: center;
+    z-index: 99;
+    position: relative;
+}
+
+.header-container {
+    position: relative;
+    z-index: 99;
+    background-color: white;
+
+    .my-input-group {
+        display: flex;
+        align-content: stretch;
+    }
+
+    .header-logo {
+        width: 85px;
+    }
+
+    ul {
+        display: flex;
+        list-style-type: none;
+    }
+
+    a {
+        text-decoration: none;
+        padding: 0 15px;
+        color: #1c1c1c;
+        font-weight: bold;
+    }
+}
+
+.background-main {
+    background-image: url("/images/jumbotron.jpg");
+    height: 400px;
+}
+
+.main-container {
+    background-color: black;
+    padding-top: 50px;
+    .container-img {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        margin-bottom: 15px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .container-button-load {
+        text-align: center;
+        padding-bottom: 20px;
+        .button-load {
+            background-color: blue;
+            padding: 0px 51px;
+            border-color: blue;
+            cursor: pointer;
+            color: white;
+            line-height: 38px;
+        }
+    }
+    .button-current {
+        color: white;
+        background-color: blue;
+        border-color: blue;
+        position: absolute;
+        top: -81px;
+        left: -3px;
+
+        a {
+            color: white;
+            text-decoration: none;
+            line-height: 47px;
+            padding: 0px 14px;
+            font-weight: bold;
+        }
+    }
+}
+
+.brand-container {
+    background-color: blue;
+    z-index: 10;
+    position: relative;
+    .brand {
+        width: 1330px;
+        margin: 0 auto;
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            justify-content: space-around;
+            padding: 50px 0;
+        }
+
+        a {
+            text-decoration: none;
+            padding: 0px 20px;
+            color: white;
+        }
+        img {
+            width: 50px;
+            vertical-align: middle;
+            height: 50px;
+            object-fit: contain;
+        }
+    }
+}
+
+.background-image {
+    background-image: url("/images/footer-bg.jpg");
+    background-size: cover;
+
+    .container-footer {
+        width: 1330px;
+        margin: 0 auto;
+        display: flex;
+        padding: 25px 0px;
+        position: relative;
+    }
+
+    .list-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-footer ul {
+        list-style-type: none;
+        padding-bottom: 15px;
+    }
+
+    .title-footer {
+        color: white;
+        padding-bottom: 15px;
+        text-align: initial;
+    }
+
+    .container-footer a {
+        text-decoration: none;
+        color: gray;
+        justify-content: flex-start;
+        display: flex;
+        padding-bottom: 5px;
+    }
+
+    .list-column2 {
+        padding: 0px 60px;
+    }
+
+    .logo-dc {
+        transform: scale(1.5);
+        position: absolute;
+        right: 0;
+        top: 0px;
+        height: 100%;
+    }
+}
+
+.background-enter {
+    background-color: #303030;
+    z-index: 10;
+    position: relative;
+
+    .container-enter {
+        display: flex;
+        width: 1330px;
+        margin: 0 auto;
+        justify-content: space-between;
+        padding: 40px 0;
+        align-items: center;
+    }
+
+    .social-icon {
+        display: flex;
+        align-items: center;
+
+        img {
+            padding-left: 10px;
+        }
+    }
+
+    .button-footer {
+        color: white;
+        background-color: #303030;
+        padding: 15px;
+        border-color: blue;
+        cursor: pointer;
+        font-size: 16px;
+
+        &:hover {
+            background-color: blue;
+            border-color: white;
+            box-shadow: 3px 3px black;
+        }
+    }
+
+    .title-footer-icon {
+        color: blue;
+        padding-right: 25px;
+    }
+}
