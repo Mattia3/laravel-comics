@@ -19,8 +19,26 @@ Route::get('/', function () {
 
 Route::get('/comics', function () {
   $arrayComics = config('comics');
-  return view('comics', ['chiave' => $arrayComics]);
+  $arrayId = [];
+  foreach($arrayComics as $key => $value){
+    $value["id"] = $key;
+    $arrayId[] = $value;
+    // dump($value);
+  
+  }
+  dump($arrayId);
+  return view('comics', ['chiave' => $arrayId]);
 })->name('comics');
+
+// Route::get('/prodotto', function () {
+//   return view('prodotto');
+// })->name('prodotto');
+
+
+Route::get('/prodotto/{id?}', function () {
+
+  return view('prodotto');
+})->name('prodotto');
 
 
 
