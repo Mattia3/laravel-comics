@@ -24,9 +24,8 @@ Route::get('/comics', function () {
     $value["id"] = $key;
     $arrayId[] = $value;
     // dump($value);
-  
   }
-  dump($arrayId);
+  // dump($arrayId);
   return view('comics', ['chiave' => $arrayId]);
 })->name('comics');
 
@@ -35,9 +34,14 @@ Route::get('/comics', function () {
 // })->name('prodotto');
 
 
-Route::get('/prodotto/{id?}', function () {
+Route::get('/prodotto/{id?}', function ($id) {
+  $arrayComics = config('comics');
 
-  return view('prodotto');
+  if($id >= 0 && $id < count($arrayComics)){
+    $singoloFumetto = $arrayComics[$id];
+    return view('prodotto', compact('singoloFumetto'));
+  }
+ 
 })->name('prodotto');
 
 
